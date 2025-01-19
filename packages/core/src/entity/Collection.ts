@@ -70,7 +70,7 @@ export class Collection<
     return coll;
   }
 
-  async get<TT extends T, P extends string = never>(
+  async loadedItems<TT extends T, P extends string = never>(
     options?: InitCollectionOptions<TT, P>
   ): Promise<Loaded<TT, P>[]> {
     if (!options && this.cachedOptions.size > 0) {
