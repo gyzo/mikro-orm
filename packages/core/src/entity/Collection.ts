@@ -305,7 +305,7 @@ export class Collection<
     if (entity instanceof Function) {
       for (const item of this.items) {
         if (entity(item as TT)) {
-          this._delete(e as T);
+          this._delete(item as T);
           this.remove(item);
         }
       }
