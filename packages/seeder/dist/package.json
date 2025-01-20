@@ -1,0 +1,60 @@
+{
+  "name": "@mikro-orm/seeder",
+  "version": "6.4.3",
+  "description": "Seeder package for MikroORM.",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mikro-orm/mikro-orm.git"
+  },
+  "keywords": [
+    "orm",
+    "mongo",
+    "mongodb",
+    "mysql",
+    "mariadb",
+    "postgresql",
+    "sqlite",
+    "sqlite3",
+    "ts",
+    "typescript",
+    "js",
+    "javascript",
+    "entity",
+    "ddd",
+    "mikro-orm",
+    "unit-of-work",
+    "data-mapper",
+    "identity-map",
+    "seeder"
+  ],
+  "author": "Wybren Kortstra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikro-orm/mikro-orm/issues"
+  },
+  "homepage": "https://mikro-orm.io",
+  "engines": {
+    "node": ">= 18.12.0"
+  },
+  "scripts": {
+    "build": "yarn clean && yarn compile && yarn copy",
+    "clean": "yarn run -T rimraf ./dist",
+    "compile": "yarn run -T tsc -p tsconfig.build.json",
+    "copy": "node ../../scripts/copy.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "fs-extra": "11.3.0",
+    "globby": "11.1.0"
+  },
+  "devDependencies": {
+    "@mikro-orm/core": "^6.4.3"
+  },
+  "peerDependencies": {
+    "@mikro-orm/core": "^6.0.0"
+  }
+}
